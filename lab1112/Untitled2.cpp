@@ -1,16 +1,38 @@
 #include <stdio.h>
-int main(){
-	int a;
-	int b;
-	for(int i=0;i<5;i++);
-	{
-		for(int j = i+1; j<5; i++);
-		if(a[i]==a[j]);
-		{
-			printf("%d\t", i);
-			printf("%d\t",j);
-		}
-		for  (int j = 0;j<3;j++)
-	}
-	
+int main()
+{
+    int a[3][3] = {{3, 9, 11}, {2, 6, 15}, {4, 7, 24}};
+    int so, i, j, n = 0;
+
+    printf("So ban dau la:\n");
+    for (i = 0; i < 3; i++)
+    {
+        for (j = 0; j < 3; j++)
+        {
+            printf("%d ", a[i][j]);
+        }
+        printf("\n");
+    }
+
+    printf("Nhap vao mot so tu 1 den 100: ");
+    scanf("%d", &so);
+
+    for (i = 0; i < 3; i++)
+    {
+        for (j = 0; j < 3; j++)
+        {
+            if (a[i][j] == so)
+            {
+                printf("Vi tri cua so %d la [%d][%d]\n", so, i, j);
+                n = 1;
+            }
+        }
+    }
+
+    if (!n)
+    {
+        printf("So %d khong co trong mang.\n", so);
+    }
+
+    return 0;
 }

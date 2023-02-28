@@ -1,12 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-
-struct dob{//ngay, thang, nam sinh cua sinh vien
 	
-int ngay;
-int thang;
-int nam;
-};
 struct Sinhvien{
 	char TenSV[40];//ten sinh vien	
 	
@@ -20,18 +14,38 @@ struct Sinhvien{
 	
 	int tuoi;//tuoi sinh vien
 	
-	int masv;//ma sinh vien
+	int Masv;//ma sinh vien
+	
+	//ngay, thang, nam sinh cua sinh vien
+	int ngay;
+    int thang;
+    int nam;
 	
 };
 int main()
 {
-	struct sinhvien sv1 = (11, "Trung","Nguyen", 2004,"Quang Binh","nam","COM1801");
-	struct sinh vien sv1 = (11, "Duc","Nguyen", 2004,"Quang Tri","nam","IT18307");
+		//thong tin sv 1
+	struct sinhvien sv1 = ("SV01", "Trung","Nguyen", 2004,"Quang Binh","nam","COM1801");
+	 printf("Thong tin sinhvien 1: \n");
+     printf("Ma SV: %s\n", sv1.maSV);
+     printf("Ho va ten: %s %s\n", sv1.ho, sv1.ten);
+     printf("Ngay sinh: %d/%d/%d\n", sv1.ngaySinh, sv1.thangSinh, sv1.namSinh);
+     printf("Que quan: %s\n", sv1.queQuan);
+     printf("Gioi tinh: %s\n", sv1.gioiTinh);
+     printf("Ma lop: %s\n", sv1.maLop);
+     //thong tin sv 2
+	struct sinhvien sv2 = ("SV02", "Duc","Nguyen", 2004,"Quang Tri","nam","IT18307");
+	 printf("\nThong tin sinhvien 2: \n");
+     printf("Ma SV: %s\n", sv2.maSV);
+     printf("Ho va ten: %s %s\n", sv2.ho, sv2.ten);
+     printf("Ngay sinh: %d/%d/%d\n", sv2.ngaySinh, sv2.thangSinh, sv2.namSinh);
+     printf("Que quan: %s\n", sv2.queQuan);
+     printf("Gioi tinh: %s\n", sv2.gioiTinh);
+     printf("Ma lop: %s\n", sv2.maLop);
 	
 		//tao du lieu sinh vien 3 bang cach copy tu sinh vien 1
 		struct sinhvien sv3;
 		sv3 = sv1;
-		printf("SV3: %d %s %s %d %s %s\n", sv1.masv,sv1.ho,sv1.tensv,sv1.namsinh,sv1.quequan,sv1.tuoi,sv1.gioitinh);
 	
 		//chinh sua thong tin sinh vien 3
 		sv3.masv = 13;
@@ -39,7 +53,17 @@ int main()
 		strcpy(sv3.ten,"Binh");
 		sv3.namsinh = 1989;
 		strcpy(sv3.quequan,"Quang Nam");
-		Strcpy(sv3.malop,"Web1010")
+		Strcpy(sv3.malop,"Web1010");
+	    printf("\nThong tin sinhvien 3: \n");
+        printf("Ma SV: %s\n", sv3.maSV);
+        printf("Ho va ten: %s %s\n", sv3.ho, sv3.ten);
+        printf("Ngay sinh: %d/%d/%d\n", sv3.ngaySinh, sv3.thangSinh, sv3.namSinh);
+        printf("Que quan: %s\n", sv3.queQuan);
+        printf("Gioi tinh: %s\n", sv3.gioiTinh);
+        printf("Ma lop: %s\n", sv3.maLop);
+		
+
+        
 	
 
 	
